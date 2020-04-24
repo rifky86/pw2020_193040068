@@ -20,8 +20,6 @@ function query($sql)
     }
     return $rows;
 }
-
-// function untuk menambah data
 function tambah($data)
 {
     $conn = koneksi();
@@ -38,5 +36,15 @@ function tambah($data)
             ";
     mysqli_query($conn, $query);
     echo mysqli_error($conn);
+    return mysqli_affected_rows($conn);
+}
+
+// functions untuk menghapus data
+
+function hapus($id)
+{
+    $conn = koneksi();
+    mysqli_query($conn, "DELETE FROM makanan WHERE id = $id");
+
     return mysqli_affected_rows($conn);
 }

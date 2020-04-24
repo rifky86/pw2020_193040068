@@ -1,0 +1,13 @@
+img{
+    height:250px;
+    padding: 20px;
+}
+.nama, tr {
+    text-align: center;
+}
+.tambah button{
+    text-align: left;
+    margin: 10px;
+}
+
+
