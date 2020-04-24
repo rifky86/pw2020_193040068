@@ -29,26 +29,20 @@ if (isset($_POST['tambah'])) {
     <h3>Form Tambah Data Buku</h3>
     <form action="" method="POST">
         <ul>
-            <li><label>
-                    Gambar:
-                    <input type="text" name="gambar" required>
-                </label>
+            <li>
+                <label>Gambar:</label><br>
+                <input type="text" name="gambar" required>
             </li>
-            <li><label>
-                    Judul:
-                    <input type="text" name="judul" required>
-                </label>
+            <li><label>Judul:</label><br>
+                <input type="text" name="judul" required>
+
             </li>
-            <li><label>
-                    Penulis:
-                    <input type="text" name="penulis" required>
-                </label>
+            <li><label>Penulis:</label><br>
+                <input type="text" name="penulis" required>
             </li>
-            <li><label>
-                    Stok:
-                    <input type="text" name="stok" required>
-                </label>
-            </li>
+            <li><label>Stok:</label><br>
+                <input type="text" name="stok" required>
+            </li><br>
             <li><button type="submit" name="tambah">TambahData</button>
             </li>
 
