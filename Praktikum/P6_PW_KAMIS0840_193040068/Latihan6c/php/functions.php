@@ -44,7 +44,7 @@ function tambah($data)
 function hapus($id)
 {
     $conn = koneksi();
-    mysqli_query($conn, "DELETE FROM makanan WHERE id = $id");
+    mysqli_query($conn, "DELETE FROM buku WHERE id = $id");
 
     return mysqli_affected_rows($conn);
 }
