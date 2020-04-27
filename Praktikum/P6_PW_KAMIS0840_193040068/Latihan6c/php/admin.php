@@ -29,7 +29,7 @@ $book = query("SELECT * FROM buku");
             <tr>
                 <td><?= $i; ?></td>
                 <td><a href="#"><button>Ubah</button></a>
-                    <a href="hapus.php?id=<?= $books['id']; ?>" onclick="return confirm('hapus data?');">Hapus</a></li>
+                    <button><a href="hapus.php?id=<?= $books['id']; ?>" onclick="return confirm('hapus data?');">Hapus</a></button> </li>
                 </td>
                 <td><img src="../Assets/img/<?= $books['gambar'] ?>"></td>
                 <td><?= $books["judul"]; ?></td>
