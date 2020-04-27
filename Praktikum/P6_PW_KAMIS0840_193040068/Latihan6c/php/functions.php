@@ -24,24 +24,25 @@ function tambah($data)
     $conn = koneksi();
 
     $gambar = htmlspecialchars($data['gambar']);
-    $nama =  htmlspecialchars($data['nama']);
-    $asal = htmlspecialchars($data['asal']);
-    $jenis = htmlspecialchars($data['jenis']);
-    $harga = htmlspecialchars($data['harga']);
+    $judul =  htmlspecialchars($data['judul']);
+    $penulis = htmlspecialchars($data['penulis']);
+    $stok = htmlspecialchars($data['stok']);
 
     $query = "INSERT INTO
-            makanan
+            buku
             VALUES
-            (NULL,'$gambar','$nama','$asal','$jenis','$harga')";
+            ('','$gambar','$judul','$penulis','$stok')
+            ";
     mysqli_query($conn, $query);
-
+    echo mysqli_error($conn);
     return mysqli_affected_rows($conn);
 }
+
+
 
 function hapus($id)
 {
     $conn = koneksi();
-    mysqli_query($conn, "DELETE FROM makanan WHERE id = $id");
-
+    mysqli_query($conn, "DELETE FROM buku WHERE id = $id") or die(mysqli_error($conn));
     return mysqli_affected_rows($conn);
 }
