@@ -41,6 +41,7 @@ if (isset($_GET["cari"])) {
                 </div>
             </form>
             <a href="tambah.php"><button class="btn btn-outline-primary mb-1">TambahData!!</button></a>
+            <a href="logout.php"><button class="btn btn-outline-danger mb-1 ml-1">Logout:D</button></a>
             <tr>
                 <th>#</th>
                 <th>Opsi</th>
@@ -72,7 +73,7 @@ if (isset($_GET["cari"])) {
                 <?php endforeach; ?>
             <?php endif ?>
         </table>
-        <a href="logout.php"><button class="btn btn-outline-primary mb-1">Logout:D</button></a>
+
     </div>
 
 </body>
