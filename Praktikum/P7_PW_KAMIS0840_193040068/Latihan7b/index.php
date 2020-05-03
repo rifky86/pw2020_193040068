@@ -4,7 +4,9 @@ require 'php/functions.php';
 if (isset($_GET["cari"])) {
     $keyword = $_GET["keyword"];
     $book = query("SELECT * FROM buku 
-                    WHERE    LIKE '%$keyword%'");
+                      WHERE 
+                      judul LIKE '%$keyword%'
+                      ");
 } else {
     $book = query("SELECT * FROM buku");
 }
