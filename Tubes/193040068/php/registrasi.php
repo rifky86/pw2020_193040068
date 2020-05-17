@@ -23,7 +23,7 @@ if (isset($_POST["register"])) {
   <!-- boostrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <!-- css -->
-  <link rel="stylesheet" href="CSS/css.css">
+  <link rel="stylesheet" href="../Assets/css/css.css">
   <title>registrasi</title>
 </head>
 
@@ -33,13 +33,12 @@ if (isset($_POST["register"])) {
       <div class="form-group mt-1">
         <label for="exampleInputEmail1">Username</label>
         <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your Username with anyone else.</small>
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1">Password</label>
         <input type="password" name="password" class="form-control" id="exampleInputPassword1">
       </div>
-      <button type="submit" class="btn btn-primary" name="register">register</button>
+      <button type="submit" class="" name="register">register</button>
     </form>
   </div>
 </body>
