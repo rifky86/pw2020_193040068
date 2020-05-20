@@ -32,9 +32,7 @@ if (isset($_GET["cari"])) {
       <li><a href="#"><i class="fab fa-facebook-f"></i><span>Facebook</span></a></li>
       <li><a href="#"><i class="fab fa-twitter"></i><span>Twitter</span></a></li>
       <li><a href="#"><i class="fab fa-instagram"></i><span>Instagram</span></a></li>
-      <li><a href="#"><i class="fab fa-linkedin-in"></i><span>Linkedin</span></a></li>
       <li><a href="#"><i class="fab fa-github"></i><span>Github</span></a></li>
-      <li><a href="#"><i class="fab fa-youtube"></i><span>Youtube</span></a></li>
     </ul>
   </nav>
   <div class="box">
@@ -60,20 +58,52 @@ if (isset($_GET["cari"])) {
         </td>
       </tr>
     <?php else : ?>
-      <?php
-      foreach ($book as $books) : ?>
+      <div class="row">
+        <?php foreach ($book as $books) : ?>
+          <div class="col-6">
+            <div class="card">
+              <div class="text-center">
+                <a href="php/detail.php?id=<?= $books['id'] ?>">
+                  <img src="Assets/img/<?= $books['gambar'] ?>" class="img-thumbnail mt-2" width="300px">
+                </a>
+                <p>
+                  <h2> <?= $books['judul'] ?></h2>
+                </p>
 
-        <div class="text-center">
-          <a href="php/detail.php?id=<?= $books['id'] ?>">
-            <img src="Assets/img/<?= $books['gambar'] ?>" class="img-thumbnail mt-2" width="350px">
-          </a>
-          <p>
-            <h2> <?= $books['judul'] ?></h2>
-          </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        <?php endforeach; ?>
+      <?php endif ?>
+      </div>
+  </div>
+  <div class="container-fluid pb-0 mb-0 justify-content-center text-light ">
+    <footer>
+      <div class="row my-5 justify-content-center py-5">
+        <div class="col-11">
+          <div class="row ">
+            <div class="col-xl-10 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
+              <h3 class="text-muted mb-md-0 mb-5 bold-text">PEMOGRAMAN WEB 2020</h3>
+            </div>
+          </div>
         </div>
-
-      <?php endforeach; ?>
-    <?php endif ?>
+        <div class="row ">
+          <div class="col-xl-4 col-md-3 col-sm-4 col-auto my-md-0 mt-5 order-sm-1 order-3 align-self-end">
+            <p class="social text-muted mb-0 pb-0 bold-text"> <span class="mx-2"><i class="fab fa-github"></i></span> <span class="mx-2"><i class="fab fa-instagram"></i></span> <span class="mx-2"><i class="fab fa-facebook"></i></p><small class="rights"><span>&#174;</span> jangan lupa ;</small>
+          </div>
+          <div class="col-xl-4 col-md-5 col-sm-4 col-auto order-1 align-self-end ">
+            <h6 class="mt-55 mt-2 text-muted bold-text"><b>RIFKY MAULANA</b></h6><small> <span><i class="fa fa-envelope" aria-hidden="true"></i></span> 193040068@mail.unpas.ac.id</small>
+          </div>
+          <div class="col-xl-4 col-md-4 col-sm-4 col-auto order-2 align-self-end mt-3 ">
+            <h6 class="text-muted bold-text"><b>UNIVERAITAS PASUNDAN</b></h6><small></span>TEKNIK INFORMATIKA</small>
+          </div>
+        </div>
+      </div>
+  </div>
+  </footer>
   </div>
   <script src="js/script.js"></script>
 </body>

@@ -28,19 +28,23 @@ if (isset($_POST["register"])) {
 </head>
 
 <body>
+
   <div class="container-sm">
-    <form action="" method="POST">
-      <div class="form-group mt-1">
-        <label for="exampleInputEmail1">Username</label>
-        <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" name="password" class="form-control" id="exampleInputPassword1">
-      </div>
-      <button type="submit" class="" name="register">register</button>
-    </form>
-  </div>
+    <div id="card">
+      <div id="card-content">
+        <div id="card-title">
+          <h2>REGISTER</h2>
+          <form action="" method="post">
+            <div class="underline-title"></div>
+            <label for="user-email" style="padding-top:13px">&nbsp;Username</label>
+            <input id="user-email" class="form-content" type="text" name="username" autocomplete="on" required />
+            <div class="form-border"></div>
+            <label for="user-password" style="padding-top:22px">&nbsp;Password</label>
+            <input id="user-password" class="form-content" type="password" name="password" required />
+            <div class="form-border"></div>
+            <button type="submit" name="register" id="submit-btn">REGISTRASI</button>
+          </form>
+        </div>
 </body>
 
 </html>

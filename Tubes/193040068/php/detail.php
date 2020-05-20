@@ -27,7 +27,7 @@ $book = query("SELECT * FROM buku WHERE id = $id")[0];
 </head>
 
 <body>
-    <div class="card w-25" style="width: 18rem;">
+    <div class="card w-25">
         <img class="card-img-top" src="../Assets/img/<?= $book["gambar"] ?>" alt="Card image cap">
         <div class="card-body">
             <h3>Judul : <?= $book['judul'] ?></h3>

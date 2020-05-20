@@ -29,7 +29,7 @@ if (isset($_GET["cari"])) {
     <!-- boostrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- css -->
-    <link rel="stylesheet" href="CSS/css.css">
+    <link rel="stylesheet" href="../css/css.css">
 </head>
 
 <body>

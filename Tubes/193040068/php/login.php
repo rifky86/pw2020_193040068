@@ -60,30 +60,37 @@ if (isset($_POST['submit'])) {
   <div class="container-sm">
     <form action="" method="post">
       <?php if (isset($error)) : ?>
-        <p style="color: red; font-style: italic;"> Username atau Password salah!</p>
+        <script>
+          alert("password atau username anda salah");
+        </script>
       <?php endif; ?>
-
-      <div class="form-group mt-1">
-        <label for="exampleInputEmail1">Username</label>
-        <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your Username with anyone else.</small>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+      <div id="card">
+        <div id="card-content">
+          <div id="card-title">
+            <h2>LOGIN</h2>
+            <form action="" method="post">
+              <div class="underline-title"></div>
+              <label for="user-email" style="padding-top:13px">&nbsp;Username</label>
+              <input id="user-email" class="form-content" type="text" name="username" autocomplete="on" required />
+              <div class="form-border"></div>
+              <label for="user-password" style="padding-top:22px">&nbsp;Password</label>
+              <input id="user-password" class="form-content" type="password" name="password" required />
+              <div class="form-border"></div>
+              <div class="remember">
+                <input type="checkbox" name="remember">
+                <label for="remember">Remember Me</label>
+              </div>
+              <button type="submit" name="submit" id="submit-btn">LOGIN</button>
+              <div id="signup">
+                <p> belum punya akun? registrasi
+                  <a href="registrasi.php">Disini</a>
+                </p>
+              </div>
+          </div>
         </div>
-        <div class="remember">
-          <input type="checkbox" name="remember">
-          <label for="remember">Remember Me</label>
-        </div>
-        <div class="registrasi">
-          <p>Belum punya aku? Registrasi <a href="registrasi.php">Disini</a></p>
-        </div>
-        <button class="" type="submit" name="submit">Login</button>
-
-    </form>
+      </div>
   </div>
-
-
+  </form>
 </body>
 
 </html>
