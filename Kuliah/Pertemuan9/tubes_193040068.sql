@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 14, 2020 at 05:02 AM
+-- Generation Time: May 21, 2020 at 06:22 AM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.8
 
@@ -52,6 +52,27 @@ INSERT INTO `buku` (`id`, `gambar`, `judul`, `penulis`, `stok`) VALUES
 (9, 'pic9.jpg', 'Negeri 5 Menara (2009)', 'Ahmad Fuadi', 63),
 (10, 'pic10.jpg', 'Daun yang Jatuh Tak Pernah Membenci Angin (2010)', 'Tere Liye', 63);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `username` varchar(64) NOT NULL,
+  `password` varchar(256) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `password`) VALUES
+(8, 'admin', '$2y$10$a.fBRbQS3eRbovk8W.NvQe/5R6fxtE8fRpDw5EoqVne.58ebIGGaW'),
+(9, 'rifky', '$2y$10$OVy46kC3tAKc9Acy2FsxZeAhCdDo.24AC1YVwahSW46DQlXJ1JzY2'),
+(10, 'bondan', '$2y$10$wxa./JnmYcbTfc7RwiGUH.FcfEveRb41b2ynLzZHvDOFU/3fuTii2');
+
 --
 -- Indexes for dumped tables
 --
@@ -63,6 +84,12 @@ ALTER TABLE `buku`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -70,6 +97,11 @@ ALTER TABLE `buku`
 -- AUTO_INCREMENT for table `buku`
 --
 ALTER TABLE `buku`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
